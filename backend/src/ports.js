@@ -1,0 +1,5 @@
+// ShoutoutRepo: list(limit), create({text,sender}), like({id})
+// SubscriptionRepo: save(sub), all()
+// PageRepo: get(), save({content})
+// PushPort: send(sub,payload)
+// Events: log(type,data)

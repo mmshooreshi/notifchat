@@ -1,0 +1,20 @@
+CREATE TABLE IF NOT EXISTS shoutouts (
+  id SERIAL PRIMARY KEY,
+  text TEXT NOT NULL,
+  sender TEXT NOT NULL,
+  likes INT NOT NULL DEFAULT 0,
+  created_at TIMESTAMPTZ NOT NULL DEFAULT now()
+);
+
+CREATE TABLE IF NOT EXISTS subscriptions (
+  endpoint TEXT PRIMARY KEY,
+  p256dh TEXT NOT NULL,
+  auth TEXT NOT NULL,
+  created_at TIMESTAMPTZ NOT NULL DEFAULT now()
+);
+
+CREATE TABLE IF NOT EXISTS shared_page (
+  id SERIAL PRIMARY KEY,
+  content TEXT NOT NULL,
+  updated_at TIMESTAMPTZ NOT NULL DEFAULT now()
+);

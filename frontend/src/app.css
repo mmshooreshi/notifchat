@@ -1,0 +1,93 @@
+body {
+  margin: 0;
+  font-family: system-ui, sans-serif;
+  background: #020617;
+  color: #e5e7eb;
+}
+
+.page {
+  max-width: 700px;
+  margin: 20px auto;
+  padding: 16px;
+}
+
+.row {
+  display: flex;
+  gap: 8px;
+  margin-bottom: 16px;
+  flex-wrap: wrap;
+}
+
+input {
+  flex: 1;
+  min-width: 140px;
+  padding: 6px 10px;
+  border-radius: 999px;
+  border: 1px solid #1e293b;
+  background: #020617;
+  color: inherit;
+}
+
+.big {
+  font-size: 20px;
+  border-radius: 999px;
+  border: none;
+  padding: 6px 14px;
+  background: #22c55e;
+  cursor: pointer;
+}
+
+.big:active {
+  transform: rotate(-2deg) scale(0.98);
+}
+
+@keyframes pop {
+  0% {
+    transform: scale(0.9);
+  }
+  70% {
+    transform: scale(1.05);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+.pop {
+  animation: pop 0.25s ease-out;
+}
+
+@keyframes flick {
+  0%,
+  100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.3;
+  }
+}
+.flicker {
+  animation: flick 0.8s ease-in-out 1;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+}
+li {
+  padding: 6px 0;
+  border-bottom: 1px solid #111827;
+}
+li button {
+  margin-left: 4px;
+}
+
+.shared {
+  width: 100%;
+  min-height: 120px;
+  padding: 8px;
+  border-radius: 8px;
+  border: 1px solid #1e293b;
+  background: #020617;
+  color: inherit;
+  font-family: inherit;
+}
